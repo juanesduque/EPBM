@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+#header{
+    height: 3em;
+    background-color: #0a70a9;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    padding: 0px 60px 0px 60px;
+}
+
+#header ul{
+    margin: 10px auto;
+}
+
+#header ul.left{
+    width: 60%;
+    float: left;
+    text-align: left;
+}
+
+#header ul.right{
+    width: 40%;
+    float: right;
+    text-align: right;
+}
+
+#header ul li{
+    list-style: none;
+    display: inline-block;
+    margin: auto 1.5rem;
+}
+
+#header ul li a{
+    color: white;
+}
+
+body{
+    background: #70180f;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #70180f, #fb7f0f);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #70180f, #fb7f0f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    color: white;
+}
+
+#section .row{
+    /* margin: 100px auto 0px auto; */
+    padding: 150px 0px 150px 0px;
+    width: 80% !important;
+}
+
+.form{
+    width: 60%;
+    margin: auto;
+}
+
+.form-group label{
+    font-size: 1.7rem;
+    margin: 0px auto 2rem auto;
+}
+
+pre, code {
+    padding:0;
+    margin:0;
+}
+
+.desactivate{
+    display: none;
+}
+
+.btn-open{
+    background-color: #70180f;
+    padding: 1em 2em;
+    font-size: 15px;
+    color: white;
+    border-radius: 15px;
+    font-weight: bold;
+    box-shadow: 2px 4px 4px 0px #ccc;
+}
+
+.btn-open:hover{
+    color: white;
+    border-bottom: 1px solid white;
+    box-shadow: 2px 4px 4px 2px #ccc;
+
+}
+
+.btn-open2{
+    background-color: #fb7f0f;
+    padding: 1em 2em;
+    font-size: 15px;
+    color: white;
+    border-radius: 15px;
+    font-weight: bold;
+    box-shadow: 2px 4px 4px 0px #ccc;
+}
+
+.btn-open2:hover{
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+#footer{
+    background-color: #0a70a9;
+    margin-top: 5em;
+    padding: 50px;
+}
+
+#footer h5{
+    font-size: 25px;
+    margin: 1em auto;
+}
+
+.imagen-content{
+    width: 200px;
+}
+
+.imagen-content img{
+    width: 100%;
+}

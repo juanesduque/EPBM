@@ -1,0 +1,146 @@
+{% extends 'baseteoria.html' %}
+
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/modulos.css' %}" type="text/css" media="all">
+<link rel="stylesheet" href="{% static 'css/highlight/dark.css' %}" type="text/css" media="all">
+{% endblock styles %}
+
+
+{% block content %}
+<section id="section">
+    <div class="row mx-auto explain">
+        <div class="col-lg-12 modulo-explain1">
+            <h4>¿Qué es?</h4>
+            <p>
+                En esta ventana se ejecutan de forma interactiva e instantánea las instrucciones de Matlab o las 
+                operaciones que se deseen realizar rápidamente, además, en esta ventana se muestran los 
+                resultados correspondientes si es el caso. Esta es una de las ventanas más importantes ya que 
+                existe desde las primeras versiones de Matlab. 
+            </p>
+        </div>
+    </div>
+    <div class="row mx-auto explain">
+        <div class="col-lg-6 mr-auto  modulo-explain2 column-6">
+            <h3>Sintaxis</h3>
+            <p>
+                El command window se encuentra ubicado en la parte inferior de la pantalla, en esta ventana se 
+                pueden digitar diversos comandos para que el usuario tenga una experiencia optima. Algunos de 
+                estos comandos son Help el cual al digitarse en el command window junto a una función cuyas 
+                características y utilidad son desconocidas, dirige al usuario a un directorio con información 
+                para de esta manera utilizar dicha función de manera adecuada. Otra de las funciones que se 
+                pueden usar en el command window es auto completar el nombre de una función oprimiendo la tecla 
+                tab facilitando el trabajo y optimizando el tiempo. Una de las tares más importantes del command 
+                window es mostrarle al usuario los errores y la línea en la cual se encuentra el error después de 
+                compilar un fichero *m. Para encontrar este error fácilmente este se encuentra subrayado con un 
+                enlace que lleva a la línea específica del error después de dar click sobre dicho enlace. 
+
+            </p>
+        </div>
+        <div class="col-lg-6 ml-auto modulo-explainim column-6">
+            <img src="{% static 'im/command.png' %}" class="w-100" alt="Workspace" style="margin-top: 46px !important;">
+        </div>
+    </div>
+    <div class="row mx-auto explain">
+        <div class="col-lg-12 modulo-explain">
+            <h3>Ejemplos</h3>
+            <p>
+                En la sección de ejemplos se pretende poner en práctica el concepto que fue explicado anteriormente 
+                con el fin de interiorizar el tema, verlo en ejecución, ver cómo se utiliza y para qué, ya que de 
+                esta manera es que se logra un aprendizaje significativo. En los ejemplos se encontraran ejercicios 
+                que pretenden dar solución a ciertos problemas planteados, esto con el fin de llevar la explicación 
+                más a la vida real y de qué mejor manera que poniendo porblemas que se presentan en la vida cotidiana
+                y resolviéndolos con este lenguaje de programación.
+            </p>
+            <div class="text-md-center">
+                <a href="#" id="openmodul" class="btn btn-open mx-auto my-md-5">Abrir ejemplos</a>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="row mx-auto">
+    <aside class="col-lg-12 col-md-12 col-12 text-md-center my-md-5 desactivate" id="slider">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="card" style="width: 25%;">
+                        <div class="content" style="width: 200px; margin-left: 48px;">
+                            <img src="{% static 'im/imagen_prueba.png' %}" class="w-100" alt="Workspace">
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Ejemplo #1</h3>
+                            <br><br>
+                            <a href="{% url 'command_window_app:ejemplo1' %}" class="btn btn-open2">Empezar ejemplo</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 25%;">
+                        <div class="content" style="width: 200px; margin-left: 48px;">
+                            <img src="{% static 'im/imagen_prueba.png' %}" class="w-100"alt="">
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Ejemplo #2</h3>
+                            <br><br>
+                            <a href="{% url 'command_window_app:ejemplo2' %}" class="btn btn-open2">Empezar ejemplo</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 25%;">
+                        <div class="content" style="width: 200px; margin-left: 48px;">
+                            <img src="{% static 'im/imagen_prueba.png' %}" class="w-100" alt="">
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Ejemplo #3</h3>
+                            <br><br>
+                            <a href="{% url 'command_window_app:ejemplo3' %}" class="btn btn-open2">Empezar ejemplo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card" style="width: 25%;">
+                        <div class="content" style="width: 200px; margin-left: 48px;">
+                            <img src="{% static 'im/imagen_prueba.png' %}" class="w-100" alt="">
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Ejemplo #4</h3>
+                            <br><br>
+                            <a href="{% url 'command_window_app:ejemplo4' %}" class="btn btn-open2">Empezar ejemplo</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 25%;">
+                        <div class="content" style="width: 200px; margin-left: 48px;">
+                            <img src="{% static 'im/imagen_prueba.png' %}" class="w-100" alt="">
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Ejemplo #5</h3>
+                            <br><br>
+                            <a href="{% url 'command_window_app:ejemplo5' %}" class="btn btn-open2">Empezar ejemplo</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 25%;">
+                        <div class="content" style="width: 200px; margin-left: 48px;">
+                            <img src="{% static 'im/imagen_prueba.png' %}" class="w-100" alt="">
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Ejemplo #6</h3>
+                            <br><br>
+                            <p class="card-text">
+                            <a href="{% url 'command_window_app:ejemplo6' %}" class="btn btn-open2">Empezar ejemplo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </aside>
+</div>
+{% endblock content %} 
+
+{% block scripts %}
+{% endblock scripts %}

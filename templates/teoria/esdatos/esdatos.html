@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/modulos.css' %}" type="text/css" media="all">
+<link rel="stylesheet" href="{% static 'css/highlight/dark.css' %}" type="text/css" media="all">
+{% endblock styles %}
+
+
+{% block content %}
+<section id="section">
+    <div class="row mx-auto explain">
+        <div class="col-lg-12 modulo-explain1">
+            <h4>¿Qué es?</h4>
+            <p>
+                El workspace es un espacio de trabajo en Matlab, en el cual se contienen un conjunto de variables 
+                y funciones de usuario las cuales en un determinado momento están definidas en la memoria del 
+                programa o de la función que se esté ejecutando. Además de esto la ventana workspace constituye 
+                un entorno gráfico para ver las variables definidas en el espacio de trabajo, de esta manera el 
+                usuario puede verificar las variables que se tienen y de esta manera poder usarlas en cualquier 
+                momento. 
+            </p>
+        </div>
+    </div>
+    <div class="row mx-auto explain">
+        <div class="col-lg-6 mr-auto  modulo-explain2 column-6">
+            <h3>Sintaxis</h3>
+            <p>
+                El workspace se encuentra ubicado en la parte derecha del programa como una ventana desplegada 
+                hacia abajo en la cual se observan las diferentes variables que se utilizan en el espacio de 
+                trabajo, dando doble click, así aparece una nueva ventana llamada “array editor” en la cual se 
+                muestran la información o datos que contiene esta variable. Para ver la información del workspace 
+                se debe de tener en cuenta los comandos who y whos, los cuales tienen dos funciones específicas, 
+                al digitar estos dos comandos en el Coommand window el primero ofrece el nombre de la variable y 
+                la segunda ofrece una información más detallada.
+            </p>
+        </div>
+        <div class="col-lg-6 ml-auto modulo-explainim column-6">
+            <img src="{% static 'im/workspace.png' %}" class="w-100" alt="Workspace">
+        </div>
+    </div>
+    <div class="row mx-auto explain">
+        <div class="col-lg-12 modulo-explain">
+            <h3>Ejemplos</h3>
+            <p>
+                En la sección de ejemplos se pretende poner en práctica el concepto que fue explicado anteriormente 
+                con el fin de interiorizar el tema, verlo en ejecución, ver cómo se utiliza y para qué, ya que de 
+                esta manera es que se logra un aprendizaje significativo. En los ejemplos se encontraran ejercicios 
+                que pretenden dar solución a ciertos problemas planteados, esto con el fin de llevar la explicación 
+                más a la vida real y de qué mejor manera que poniendo porblemas que se presentan en la vida cotidiana
+                y resolviéndolos con este lenguaje de programación.
+            </p>
+            <div class="text-md-center">
+                <a href="#" id="openmodul" class="btn btn-open mx-auto my-md-5">Abrir ejemplos</a>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="row mx-auto">
+    <aside class="col-lg-12 col-md-12 col-12 text-md-center my-md-5 desactivate" id="slider">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="card" style="width: 25%;">
+                        <div class="content" style="width: 200px; margin-left: 48px;">
+                            <img src="{% static 'im/imagen_prueba.png' %}" class="w-100" alt="Workspace">
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Ejemplo #1</h3>
+                            <br><br>
+                            <a href="{% url 'workspace_app:ejemplo1' %}" class="btn btn-open2">Empezar ejemplo</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 25%;">
+                        <div class="content" style="width: 200px; margin-left: 48px;">
+                            <img src="{% static 'im/imagen_prueba.png' %}" class="w-100"alt="">
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Ejemplo #2</h3>
+                            <br><br>
+                            <a href="{% url 'workspace_app:ejemplo2' %}" class="btn btn-open2">Empezar ejemplo</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 25%;">
+                        <div class="content" style="width: 200px; margin-left: 48px;">
+                            <img src="{% static 'im/imagen_prueba.png' %}" class="w-100" alt="">
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Ejemplo #3</h3>
+                            <br><br>
+                            <a href="{% url 'workspace_app:ejemplo3' %}" class="btn btn-open2">Empezar ejemplo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card" style="width: 25%;">
+                        <div class="content" style="width: 200px; margin-left: 48px;">
+                            <img src="{% static 'im/imagen_prueba.png' %}" class="w-100" alt="">
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Ejemplo #4</h3>
+                            <br><br>
+                            <a href="{% url 'workspace_app:ejemplo4' %}" class="btn btn-open2">Empezar ejemplo</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 25%;">
+                        <div class="content" style="width: 200px; margin-left: 48px;">
+                            <img src="{% static 'im/imagen_prueba.png' %}" class="w-100" alt="">
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Ejemplo #5</h3>
+                            <br><br>
+                            <a href="{% url 'workspace_app:ejemplo5' %}" class="btn btn-open2">Empezar ejemplo</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 25%;">
+                        <div class="content" style="width: 200px; margin-left: 48px;">
+                            <img src="{% static 'im/imagen_prueba.png' %}" class="w-100" alt="">
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Ejemplo #6</h3>
+                            <br><br>
+                            <p class="card-text">
+                            <a href="{% url 'workspace_app:ejemplo6' %}" class="btn btn-open2">Empezar ejemplo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </aside>
+</div>
+{% endblock content %}  
+
+{% block scripts %}
+{% endblock scripts %}

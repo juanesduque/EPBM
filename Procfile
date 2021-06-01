@@ -1,0 +1,1 @@
+web: gunicorn EPBM.wsgi --log-file -

@@ -1,0 +1,94 @@
+{% extends 'baseejemplos.html' %}
+
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/ejemplos.css' %}" type="text/css" media="all">
+<link rel="stylesheet" href="{% static 'css/highlight/dark.css' %}" type="text/css" media="all">
+{% endblock styles %}
+
+{% block header %}
+    <a href="{% url matrices_app:matrices %}"><img src="{% static 'im/regreso.png' %}" class="mr-2">Regresar</a>
+{% endblock header %}    
+
+{% block content %}
+<section id="section">
+    <div class="row mx-auto">
+        <div class="col-md-6 col-12">
+            <pre>
+                <code class="language-matlab">    Línea 1
+<span id="data-line1" class="line-code desactivate">Línea 2</span>
+Línea 3
+<span id="data-line2" class="line-code desactivate">Línea 4</span>
+Línea 5
+<span id="data-line3" class="line-code desactivate">Línea 6</span>
+Línea 7
+                </code>
+            </pre>
+
+            <div id="boton" class="desactivate">
+                <a href="#" class="btn btn-open2">Ejecutar</a>
+            </div>
+
+        </div>
+        <div class="col-md-6 col-12">
+            <form action="" class="form text-md-center" id="form">
+                <div class="form-group text-md-center">
+                    <label for="exampleFormControlSelect1" class="">¿Que línea viene aqui?</label>
+                    <span id="line-reference">Línea # 2</span>
+                    <select class="form-control" id="selectcontrol">
+                        <option value="1">Linea 1</option>
+                        <option value="2">Linea 2</option>
+                        <option value="3">Linea 4</option>
+                        <option value="4">Linea 7</option>
+                        <option value="5">Linea 6</option>
+                    </select>
+                </div>
+                <button class="btn btn-open" type="submit">Agregar Linea</button>
+            </form>
+        </div>
+    </div>
+
+</section>
+{% endblock content %}
+    
+{% block scripts %}
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+
+    var num_lines = 3,
+        initial = 1,
+    corrects = {
+        'line1': 2,
+        'line2': 3,
+        'line3': 5
+    }
+
+    lines = {
+        'line1': 2,
+        'line2': 4,
+        'line3': 6
+    }
+
+    $('#form').submit(function (e) {
+        e.preventDefault()
+        console.log($('#selectcontrol').val())
+        let val = parseInt($('#selectcontrol').val()),
+            id = '#data-line' + initial,
+            line_correct = 'line' + initial
+        if (val == corrects[line_correct]) {
+            $(id).removeClass('desactivate')
+            initial++
+            line_correct = 'line' + initial
+            $('#line-reference').text('Línea # ' + lines[line_correct])
+            if (initial > num_lines) {
+                $('#form').toggle('explode')
+                $('#boton').toggle('explode')
+            }
+        } else {
+            alert("¿Seguro?")
+        }
+    })
+</script>
+{% endblock scripts %}

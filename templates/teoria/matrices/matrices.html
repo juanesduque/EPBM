@@ -1,0 +1,149 @@
+{% extends 'baseteoria.html' %}
+
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/modulos.css' %}" type="text/css" media="all">
+<link rel="stylesheet" href="{% static 'css/highlight/dark.css' %}" type="text/css" media="all">
+{% endblock styles %}
+
+
+{% block content %}
+<section id="section">
+    <div class="row mx-auto explain">
+        <div class="col-lg-12 modulo-explain1">
+            <h4>¿Qué es?</h4>
+            <p>
+                Un arreglo bidimensional o matriz, es una estructura de datos o un tipo de dato el cual permite 
+                almacenar varios valores a la vez que se pueden ordenar en forma de tabla y con la cual se puede 
+                realizar, al igual que con cualquier otro tipo de dato, cualquier operación tanto lógica como 
+                matemática, obteniendo los mismos valores, pero, como ya se mencionó, no solo uno, sino lo que 
+                se deseen. Otra forma de ver los arreglos bidimensionales es como una tabla, es decir que estos 
+                pueden interpretar una serie de datos puestas sobre un plano cartesiano, lo que hace que esta sea 
+                una herramienta muy potente para realizar programas que se usen, por ejemplo, para el análisis de 
+                señales o la solución de problemas que den como resultado sistemas de ecuaciones. <br>
+                Cabe resaltar que en Matlab todas las variables se toman como una matriz de 1x1, mientras otros 
+                lenguajes de programación procesan los números de uno en uno, Matlab está diseñado para trabajar 
+                principalmente con matrices y arreglos completos.
+            </p>
+        </div>
+    </div>
+    <div class="row mx-auto explain">
+        <div class="col-lg-6 mr-auto  modulo-explain2 column-6">
+            <h3>Sintaxis</h3>
+            <p>
+                Para definir una matriz en Matlab no es necesario declarar de antemano su tamaño, cabe resaltar 
+                que se puede definir el tamaño de la matriz y posteriormente cambiarlo. Matlab determina el 
+                número de filas y de columnas esto en función del número de elementos que se le proporcionen. 
+                Para ingresar por teclado las matrices se definen o se introducen por filas, los elementos de una 
+                misma fila están separados por blancos o por comas, mientras que las filas están separadas por 
+                pulsaciones “intro” o por caracteres punto y coma. 
+
+            </p>
+        </div>
+        <div class="col-lg-6 ml-auto modulo-explainim column-6">
+            <img src="{% static 'im/matrices.png' %}" class="w-100" alt="Workspace">
+        </div>
+    </div>
+    <div class="row mx-auto explain">
+        <div class="col-lg-12 modulo-explain">
+            <h3>Ejemplos</h3>
+            <p>
+                En la sección de ejemplos se pretende poner en práctica el concepto que fue explicado anteriormente 
+                con el fin de interiorizar el tema, verlo en ejecución, ver cómo se utiliza y para qué, ya que de 
+                esta manera es que se logra un aprendizaje significativo. En los ejemplos se encontraran ejercicios 
+                que pretenden dar solución a ciertos problemas planteados, esto con el fin de llevar la explicación 
+                más a la vida real y de qué mejor manera que poniendo porblemas que se presentan en la vida cotidiana
+                y resolviéndolos con este lenguaje de programación.
+            </p>
+            <div class="text-md-center">
+                <a href="#" id="openmodul" class="btn btn-open mx-auto my-md-5">Abrir ejemplos</a>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="row mx-auto">
+    <aside class="col-lg-12 col-md-12 col-12 text-md-center my-md-5 desactivate" id="slider">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="card" style="width: 25%;">
+                        <div class="content" style="width: 200px; margin-left: 48px;">
+                            <img src="{% static 'im/imagen_prueba.png' %}" class="w-100" alt="Workspace">
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Ejemplo #1</h3>
+                            <br><br>
+                            <a href="{% url 'matrices_app:ejemplo1' %}" class="btn btn-open2">Empezar ejemplo</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 25%;">
+                        <div class="content" style="width: 200px; margin-left: 48px;">
+                            <img src="{% static 'im/imagen_prueba.png' %}" class="w-100"alt="">
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Ejemplo #2</h3>
+                            <br><br>
+                            <a href="{% url 'matrices_app:ejemplo2' %}" class="btn btn-open2">Empezar ejemplo</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 25%;">
+                        <div class="content" style="width: 200px; margin-left: 48px;">
+                            <img src="{% static 'im/imagen_prueba.png' %}" class="w-100" alt="">
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Ejemplo #3</h3>
+                            <br><br>
+                            <a href="{% url 'matrices_app:ejemplo3' %}" class="btn btn-open2">Empezar ejemplo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card" style="width: 25%;">
+                        <div class="content" style="width: 200px; margin-left: 48px;">
+                            <img src="{% static 'im/imagen_prueba.png' %}" class="w-100" alt="">
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Ejemplo #4</h3>
+                            <br><br>
+                            <a href="{% url 'matrices_app:ejemplo4' %}" class="btn btn-open2">Empezar ejemplo</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 25%;">
+                        <div class="content" style="width: 200px; margin-left: 48px;">
+                            <img src="{% static 'im/imagen_prueba.png' %}" class="w-100" alt="">
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Ejemplo #5</h3>
+                            <br><br>
+                            <a href="{% url 'matrices_app:ejemplo5' %}" class="btn btn-open2">Empezar ejemplo</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 25%;">
+                        <div class="content" style="width: 200px; margin-left: 48px;">
+                            <img src="{% static 'im/imagen_prueba.png' %}" class="w-100" alt="">
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Ejemplo #6</h3>
+                            <br><br>
+                            <p class="card-text">
+                            <a href="{% url 'matrices_app:ejemplo6' %}" class="btn btn-open2">Empezar ejemplo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </aside>
+</div>
+{% endblock content %}
+
+{% block scripts %}
+{% endblock scripts %}
