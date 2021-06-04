@@ -73,6 +73,17 @@ body{
     width: 80% !important;
 }
 
+.mod1{	
+	padding: 20px;
+	border-radius: 20px;
+	background-color: rgb(221, 221, 221);
+    color: black;
+}
+
+.mod1 h3{
+    color: black;
+}
+
 #section #enunciado{
     margin-left: 100px;
 }
@@ -80,6 +91,7 @@ body{
 .form{
     width: 60%;
     margin: auto;
+    color: black;
 }
 
 .form-group label{
