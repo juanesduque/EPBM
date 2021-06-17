@@ -34,7 +34,7 @@
 <section id="section">
     <div class="row mx-auto">
         <div class="col-md-12 text-center">
-            <h1>Ejemplo #2</h1>
+            <h1>Ejemplo #3</h1>
         </div>
     </div>
     <hr><br>
@@ -43,8 +43,8 @@
             <h2>Enunciado</h2>
             <br>
             <p>
-                Se requiere desarrollar un programa que llene una matriz de tamaño 3x3 con números ingresados por teclado y 
-                posteriormente, imprimir esta matriz en la pantalla.
+                Se requiere desarrollar programa que defina una matriz de números ingresados por teclado y calcule la 
+                suma de los elementos que la componen, además debe de mostrar el resultado de esta suma.
             </p><br>
             <button href="#" id="empezar" class="btn btn-open2">Empezar proyecto</button>
         </div>
@@ -54,7 +54,16 @@
             <h3 class="text-center">Solución</h3>
             <pre id="code">
                 <code class="language-c++">
-    <span style="color: blue;">1 </span><span id="cont-higlight1" class="line-higlight"><span id="linea-higlight1"> </span><span id="linea-1" class="desactivate"> A = [[1, 2, 3, 4]; [5, 6, 7, 8]; [9, 10, 11, 12]; [13, 14, 15, 16]]</span></span>
+    <span style="color: blue;"> 1 </span><span>filas = input('Ingrese el número de filas: ');</span>
+    <span style="color: blue;"> 2 </span><span id="cont-higlight1" class="line-higlight"><span id="linea-higlight1"> </span><span id="linea-1" class="desactivate">columnas = input('Ingrese el número de columnas: ');</span></span>
+    <span style="color: blue;"> 3 </span><span>A = zeros(filas);</span>
+    <span style="color: blue;"> 4 </span><span>suma = 0;</span>
+    <span style="color: blue;"> 5 </span><span>for i = 1:filas</span>
+    <span style="color: blue;"> 6 </span><span id="cont-higlight2" class="line-higlight"><span id="linea-higlight2"> </span><span id="linea-2" class="desactivate">    for j = 1:columnas</span></span>
+    <span style="color: blue;"> 7 </span><span>        A(i,j) = input('Ingrese un número: ');</span>
+    <span style="color: blue;"> 8 </span><span>    end</span>
+    <span style="color: blue;"> 9 </span><span id="cont-higlight3" class="line-higlight"><span id="linea-higlight3"> </span><span id="linea-3" class="desactivate">end</span></span>
+    <span style="color: blue;">10 </span><span>disp(suma)</span>
                 </code>
             </pre>
             <br>
@@ -66,7 +75,16 @@
             <h3 class="text-center">Explicación</h3>
             <pre>
                 <code class="language-c++">
-    <span style="color: blue;">1 </span><span>Se escribe el nombre de la matriz y se igual a sus valores respectivos ordenados en forma de tabla. Esto se hace sin el punto y coma para que la matriz sea impresa en pantalla inmediatamente.</span>
+    <span style="color: blue;"> 1 </span><span>Se declara una variable en la cual se guarda el número de filas ingresadas por teclado por el usuario.</span>
+    <span style="color: blue;"> 2 </span><span>Se declara una variable en la cual se guarda el número de columnas ingresadas por teclado por el usuario.</span>
+    <span style="color: blue;"> 3 </span><span>Se declara una matriz de nombre A y se inicializa llenándola de ceros.</span>
+    <span style="color: blue;"> 4 </span><span>Se declara una variable llamada suma la cuál va a almacenar la sumatoria de los elementos de la matriz y se iguala a cero para inicializarla.</span>
+    <span style="color: blue;"> 5 </span><span>Se inicia el primer ciclo for con el indexador i el cual va a recorrer las filas.</span>
+    <span style="color: blue;"> 6 </span><span>Se inicia el segundo ciclo for con el indexador j el cual va a recorrer las columnas.</span>
+    <span style="color: blue;"> 7 </span><span>Se pone el nombre de la matriz junto con sus indexadores correspondientes y se iguala al comando que permite que el usuario ingrese el valor.</span>
+    <span style="color: blue;"> 8 </span><span>Ahora se cierra el ciclo for de las columnas.</span>
+    <span style="color: blue;"> 9 </span><span>Por último, se cierra el ciclo for de las filas.</span>
+    <span style="color: blue;">10 </span><span>Además, se pone el comando disp con la variable que contiene la suma para que este la muestre.</span>
                 </code>
             </pre>
             <br>
@@ -128,15 +146,29 @@
 {% block scripts %}
 <script>
     var cont = 1,
-        num_total = 1
+        num_total = 3
 
     var lineas = {
         '1': {
-            'line_code':1,
+            'line_code':2,
+            'correct_line':4,
+            'congratulation':'Para pedir el número de columnas se debe igualar una variable a el comando que permite ingresar por teclado cualquier dato y mostrar un mensaje al tiempo, esto se hace con punto y coma, ya que de esta manera no se muestra el valor ingresado.',
+            'explaincode':'Se debe pedir al usuario que ingrese por teclado el número de columnas de la matriz, ¿Qué línea de código viene aquí?',
+            'values':['columnas = input "Ingrese el número de columnas: "','columnas = input();','columnas = input("Ingrese el número de columnas: ")','columnas = input("Ingrese el número de columnas: ");']
+        },
+        '2': {
+            'line_code':6,
             'correct_line':2,
-            'congratulation':'Para declarar una matriz se debe poner el nombre de la matriz e igualarlo a los valores que se quieren, esto se hace sin punto y coma, ya que de esta manera se muestra la matriz inmediatamente.',
-            'explaincode':'Se debe declarar una matriz de nombre "A" con los números del 1 al 16, ¿Qué línea de código viene aquí?',
-            'values':['A = [[1, 2, 3, 4]; [5, 6, 7, 8]; [9, 10, 11, 12]; [13, 14, 15, 16]];','A = [[1, 2, 3, 4]; [5, 6, 7, 8]; [9, 10, 11, 12]; [13, 14, 15, 16]]','A = [[1, 2, 3, 4] [5, 6, 7, 8] [9, 10, 11, 12] [13, 14, 15, 16]]','A = [1, 2, 3, 4  5, 6, 7, 8  9, 10, 11, 12  13, 14, 15, 16]']
+            'congratulation':'Para recorrer las columnas de una matriz, se debe poner un ciclo for que vaya desde 1 hasta el número de columnas ingresadas por el usuario, esto se hace sin punto y coma y sin nada al final.',
+            'explaincode':'Se debe recorrer las columnas de la matriz utilizando un ciclo for, ¿Qué línea de código viene aquí?',
+            'values':['for j = 1:10','for j = 1:columnas','for j = 1:columnas;','for j = 1:columnas:']
+        },
+        '3': {
+            'line_code':9,
+            'correct_line':3,
+            'congratulation':'Para cerrar un ciclo se debe poner el comando end, esto se hace sin punto y coma y sin nada al final.',
+            'explaincode':'Se debe cerrar el ciclo for principal el cual indexa las filas, ¿Qué línea de código viene aquí?',
+            'values':['fin','end;','end','end:']
         }
     }
 

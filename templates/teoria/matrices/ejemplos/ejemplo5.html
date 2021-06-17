@@ -34,7 +34,7 @@
 <section id="section">
     <div class="row mx-auto">
         <div class="col-md-12 text-center">
-            <h1>Ejemplo #2</h1>
+            <h1>Ejemplo #5</h1>
         </div>
     </div>
     <hr><br>
@@ -43,8 +43,8 @@
             <h2>Enunciado</h2>
             <br>
             <p>
-                Se requiere desarrollar un programa que llene una matriz de tamaño 3x3 con números ingresados por teclado y 
-                posteriormente, imprimir esta matriz en la pantalla.
+                Se requiere desarrollar un programa en el que se ingrese por teclado una matriz de enteros y calcule 
+                el número mayor y el número menor de estos números ingresados dentro de la matriz.
             </p><br>
             <button href="#" id="empezar" class="btn btn-open2">Empezar proyecto</button>
         </div>
@@ -54,7 +54,25 @@
             <h3 class="text-center">Solución</h3>
             <pre id="code">
                 <code class="language-c++">
-    <span style="color: blue;">1 </span><span id="cont-higlight1" class="line-higlight"><span id="linea-higlight1"> </span><span id="linea-1" class="desactivate"> A = [[1, 2, 3, 4]; [5, 6, 7, 8]; [9, 10, 11, 12]; [13, 14, 15, 16]]</span></span>
+    <span style="color: blue;"> 1 </span><span>filas = input('Ingrese el número de filas: ');</span>
+    <span style="color: blue;"> 2 </span><span>columnas = input('Ingrese el número de columnas: ');</span>
+    <span style="color: blue;"> 3 </span><span>A = zeros(filas);<span>
+    <span style="color: blue;"> 4 </span><span id="cont-higlight1" class="line-higlight"><span id="linea-higlight1"> </span><span id="linea-1" class="desactivate">mayor = 0;</span></span>
+    <span style="color: blue;"> 5 </span><span>menor = 10000;</span>
+    <span style="color: blue;"> 6 </span><span>for i = 1:filas</span>
+    <span style="color: blue;"> 7 </span><span>    for j = 1:columnas</span>
+    <span style="color: blue;"> 8 </span><span>        A(i,j) = input('Ingrese un número: ');</span>
+    <span style="color: blue;"> 9 </span><span id="cont-higlight2" class="line-higlight"><span id="linea-higlight2"> </span><span id="linea-2" class="desactivate">        if A(i,j) > mayor</span></span>
+    <span style="color: blue;">10 </span><span>            mayor = A(i,j);</span>
+    <span style="color: blue;">11 </span><span>        end</span>
+    <span style="color: blue;">12 </span><span>        if A(i,j) < menor</span>
+    <span style="color: blue;">13 </span><span id="cont-higlight3" class="line-higlight"><span id="linea-higlight3"> </span><span id="linea-3" class="desactivate">            menor = A(i,j);</span></span>
+    <span style="color: blue;">14 </span><span>        end</span>
+    <span style="color: blue;">15 </span><span>    end</span>
+    <span style="color: blue;">16 </span><span>end</span>
+    <span style="color: blue;">17 </span><span>disp(mayor)</span>
+    <span style="color: blue;">18 </span><span>disp(menor)</span>
+
                 </code>
             </pre>
             <br>
@@ -66,7 +84,24 @@
             <h3 class="text-center">Explicación</h3>
             <pre>
                 <code class="language-c++">
-    <span style="color: blue;">1 </span><span>Se escribe el nombre de la matriz y se igual a sus valores respectivos ordenados en forma de tabla. Esto se hace sin el punto y coma para que la matriz sea impresa en pantalla inmediatamente.</span>
+    <span style="color: blue;"> 1 </span><span>Se declara una variable en la cual se guarda el número de filas ingresadas por teclado por el usuario.</span>
+    <span style="color: blue;"> 2 </span><span>Se declara una variable en la cual se guarda el número de columnas ingresadas por teclado por el usuario.</span>
+    <span style="color: blue;"> 3 </span><span>Se declara una matriz de nombre A y se inicializa llenándola de ceros.</span>
+    <span style="color: blue;"> 4 </span><span>Se declara una variable llamada mayor y se iguala a cero para inicializarla.</span>
+    <span style="color: blue;"> 5 </span><span>Se declara una variable llamada menor y se iguala a un valro muy grande para que luego haga la comparación y de este modo inicializarla.</span>
+    <span style="color: blue;"> 6 </span><span>Se inicia el primer ciclo for con el indexador i el cual va a recorrer las filas.</span>
+    <span style="color: blue;"> 7 </span><span>Se inicia el segundo ciclo for con el indexador j el cual va a recorrer las columnas.</span>
+    <span style="color: blue;"> 8 </span><span>Se pone el nombre de la matriz junto con sus indexadores correspondientes y se iguala al comando que permite que el usuario ingrese el valor.</span>
+    <span style="color: blue;"> 9 </span><span>Se pone la sentencia if para evaluar cuál número es mayor.</span>
+    <span style="color: blue;">10 </span><span>Si el número ingresado es mayor, se igual la variable mayor a este valor de la matriz.</span>
+    <span style="color: blue;">11 </span><span>Se cierra la sentencia if que hace la evaluación de qué número es mayor.</span>
+    <span style="color: blue;">12 </span><span>Se pone la sentencia if para evaluar cuál número es menor.</span>
+    <span style="color: blue;">13 </span><span>Si el número ingresado es menor, se igual la variable menor a este valor de la matriz.</span>
+    <span style="color: blue;">14 </span><span>Se cierra la sentencia if que hace la evaluación de qué número es menor.</span>
+    <span style="color: blue;">15 </span><span>Ahora se cierra el ciclo for de las columnas.</span>
+    <span style="color: blue;">16 </span><span>Por último, se cierra el ciclo for de las filas.</span>
+    <span style="color: blue;">17 </span><span>Además, se pone el comando disp con la variable que contiene el número mayor para que este la muestre.</span>
+    <span style="color: blue;">18 </span><span>También, se pone el comando disp con la variable que contiene el número menor para que este la muestre.</span>
                 </code>
             </pre>
             <br>
@@ -128,15 +163,29 @@
 {% block scripts %}
 <script>
     var cont = 1,
-        num_total = 1
+        num_total = 3
 
     var lineas = {
         '1': {
-            'line_code':1,
+            'line_code':4,
             'correct_line':2,
-            'congratulation':'Para declarar una matriz se debe poner el nombre de la matriz e igualarlo a los valores que se quieren, esto se hace sin punto y coma, ya que de esta manera se muestra la matriz inmediatamente.',
-            'explaincode':'Se debe declarar una matriz de nombre "A" con los números del 1 al 16, ¿Qué línea de código viene aquí?',
-            'values':['A = [[1, 2, 3, 4]; [5, 6, 7, 8]; [9, 10, 11, 12]; [13, 14, 15, 16]];','A = [[1, 2, 3, 4]; [5, 6, 7, 8]; [9, 10, 11, 12]; [13, 14, 15, 16]]','A = [[1, 2, 3, 4] [5, 6, 7, 8] [9, 10, 11, 12] [13, 14, 15, 16]]','A = [1, 2, 3, 4  5, 6, 7, 8  9, 10, 11, 12  13, 14, 15, 16]']
+            'congratulation':'Para iniciarlizar una variable se debe poner el nombre de esta e igualarlo al valor que se le quiere dar inicialmente, esto se hace con punto y coma, ya que de esta manera no se muestra el valor inmediatamente.',
+            'explaincode':'Se debe inicializar una variable en la cual se va a almacenar el número mayor encontrado en la matriz, ¿Qué línea de código viene aquí?',
+            'values':['mayor = 0','mayor = 0;','mayor;','mayo = 0;']
+        },
+        '2': {
+            'line_code':9,
+            'correct_line':1,
+            'congratulation':'Para evaluar si el valor que hay en la posición de la matriz es mayor que el valor que hay en la variable, se debe utilizar la sentencia if y el operador lógico mayor que (>), esto se hace sin punto y coma y sin nada al final.',
+            'explaincode':'Se debe evaluar si el número que está en esa posición de la matriz es mayor que el que ya está almacenado o no en la variable, ¿Qué línea de código viene aquí?',
+            'values':['if A(i,j) > mayor','if A(i,j) > mayor:','if A(i,j) > mayor;','if A() > mayor']
+        },
+        '3': {
+            'line_code':13,
+            'correct_line':4,
+            'congratulation':'Para igualar la variable al valor que hay en esa posición de la matriz, se pone el nombre de la variable y se iguala a la matriz en esa posición, esto se hace con punto y coma para que de esta manera no muestre el valor inmediatamente.',
+            'explaincode':'Se debe igualar la variable al valor que está en esa posición de la matriz dado que este sea menor que el valor que ya se encuentra almacenado en la variable, ¿Qué línea de código viene aquí?',
+            'values':['menor = A()','menor = A(i,j)','menor = A();','menor = A(i,j);']
         }
     }
 

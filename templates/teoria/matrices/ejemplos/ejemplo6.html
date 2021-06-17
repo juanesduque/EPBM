@@ -34,7 +34,7 @@
 <section id="section">
     <div class="row mx-auto">
         <div class="col-md-12 text-center">
-            <h1>Ejemplo #2</h1>
+            <h1>Ejemplo #6</h1>
         </div>
     </div>
     <hr><br>
@@ -43,8 +43,8 @@
             <h2>Enunciado</h2>
             <br>
             <p>
-                Se requiere desarrollar un programa que llene una matriz de tamaño 3x3 con números ingresados por teclado y 
-                posteriormente, imprimir esta matriz en la pantalla.
+                Se requiere desarrollar un programa en el que se ingrese por teclado una matriz de números enteros y 
+                que en pantalla se muestre la matriz original y su transpuesta.
             </p><br>
             <button href="#" id="empezar" class="btn btn-open2">Empezar proyecto</button>
         </div>
@@ -54,7 +54,16 @@
             <h3 class="text-center">Solución</h3>
             <pre id="code">
                 <code class="language-c++">
-    <span style="color: blue;">1 </span><span id="cont-higlight1" class="line-higlight"><span id="linea-higlight1"> </span><span id="linea-1" class="desactivate"> A = [[1, 2, 3, 4]; [5, 6, 7, 8]; [9, 10, 11, 12]; [13, 14, 15, 16]]</span></span>
+    <span style="color: blue;"> 1 </span><span>filas = input('Ingrese el número de filas: ');</span>
+    <span style="color: blue;"> 2 </span><span>columnas = input('Ingrese el número de columnas: ');</span>
+    <span style="color: blue;"> 3 </span><span id="cont-higlight1" class="line-higlight"><span id="linea-higlight1"> </span><span id="linea-1" class="desactivate">A = zeros(filas);</span></span>
+    <span style="color: blue;"> 4 </span><span>for i = 1:filas</span>
+    <span style="color: blue;"> 5 </span><span>    for j = 1:columnas</span>
+    <span style="color: blue;"> 6 </span><span>        A(i,j) = input('Ingrese un número: ');</span>
+    <span style="color: blue;"> 7 </span><span>    end</span>
+    <span style="color: blue;"> 8 </span><span>end</span>
+    <span style="color: blue;"> 9 </span><span>disp(A)</span>
+    <span style="color: blue;">10 </span><span id="cont-higlight2" class="line-higlight"><span id="linea-higlight2"> </span><span id="linea-2" class="desactivate">disp(transpose(A))</span></span>
                 </code>
             </pre>
             <br>
@@ -66,7 +75,16 @@
             <h3 class="text-center">Explicación</h3>
             <pre>
                 <code class="language-c++">
-    <span style="color: blue;">1 </span><span>Se escribe el nombre de la matriz y se igual a sus valores respectivos ordenados en forma de tabla. Esto se hace sin el punto y coma para que la matriz sea impresa en pantalla inmediatamente.</span>
+    <span style="color: blue;"> 1 </span><span>Se declara una variable en la cual se guarda el número de filas ingresadas por teclado por el usuario.</span>
+    <span style="color: blue;"> 2 </span><span>Se declara una variable en la cual se guarda el número de columnas ingresadas por teclado por el usuario.</span>
+    <span style="color: blue;"> 3 </span><span>Se declara una matriz de nombre A y se inicializa llenándola de ceros.</span>
+    <span style="color: blue;"> 4 </span><span>Se inicia el primer ciclo for con el indexador i el cual va a recorrer las filas.</span>
+    <span style="color: blue;"> 5 </span><span>Se inicia el segundo ciclo for con el indexador j el cual va a recorrer las columnas.</span>
+    <span style="color: blue;"> 6 </span><span>Se pone el nombre de la matriz junto con sus indexadores correspondientes y se iguala al comando que permite que el usuario ingrese el valor.</span>
+    <span style="color: blue;"> 7 </span><span>Ahora se cierra el ciclo for de las columnas.</span>
+    <span style="color: blue;"> 8 </span><span>Por último, se cierra el ciclo for de las filas.</span>
+    <span style="color: blue;"> 9 </span><span>Además, se pone el comando disp con la variable que contiene la matriz para que este la muestre.</span>
+    <span style="color: blue;">10 </span><span>También, se pone el comando disp con la variable que contiene la función de matlab que transpone a la matriz ingresada para que este la muestre.</span>
                 </code>
             </pre>
             <br>
@@ -128,15 +146,22 @@
 {% block scripts %}
 <script>
     var cont = 1,
-        num_total = 1
+        num_total = 2
 
     var lineas = {
         '1': {
-            'line_code':1,
-            'correct_line':2,
-            'congratulation':'Para declarar una matriz se debe poner el nombre de la matriz e igualarlo a los valores que se quieren, esto se hace sin punto y coma, ya que de esta manera se muestra la matriz inmediatamente.',
-            'explaincode':'Se debe declarar una matriz de nombre "A" con los números del 1 al 16, ¿Qué línea de código viene aquí?',
-            'values':['A = [[1, 2, 3, 4]; [5, 6, 7, 8]; [9, 10, 11, 12]; [13, 14, 15, 16]];','A = [[1, 2, 3, 4]; [5, 6, 7, 8]; [9, 10, 11, 12]; [13, 14, 15, 16]]','A = [[1, 2, 3, 4] [5, 6, 7, 8] [9, 10, 11, 12] [13, 14, 15, 16]]','A = [1, 2, 3, 4  5, 6, 7, 8  9, 10, 11, 12  13, 14, 15, 16]']
+            'line_code':3,
+            'correct_line':3,
+            'congratulation':'Para iniciarlizar una matriz se llena de ceros utilizando el comando zeros() y como parámetro se le debe de ingresar el tamaño de la matriz para que el programa sepa cuántos ceros poner, esto se hace con punto y coma, ya que de esta manera no se muestra los valores de la matriz.',
+            'explaincode':'Se debe inicializar la matriz A para posteriormente llenarla, para esto se llena de ceros, ¿Qué línea de código viene aquí?',
+            'values':['A = zeros();','A = zeros(filas)','A = zeros(filas);','A = zeros()']
+        },
+        '2': {
+            'line_code':10,
+            'correct_line':1,
+            'congratulation':'Para imprimir la matriz transpuesta se pone el comando disp y en su argumento se pone la función transpose(), la cual transpone a la matriz original, esto se hace sin punto y coma y sin nada al final.',
+            'explaincode':'Se debe imprimir en pantalla la función que transpone a la matriz para que este muestre la matriz que se ingresó pero transpuesta, ¿Qué línea de código viene aquí?',
+            'values':['disp(transpose(A))','disp(transpose())','disp(transpose(A));','disp(A)']
         }
     }
 
