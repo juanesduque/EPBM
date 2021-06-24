@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'baseteoria.html' %}
 
 {% load static %}
 
@@ -26,22 +26,102 @@
             </p>
         </div>
         <div class="col-lg-6 ml-auto modulo-explainim column-6">
-            <img src="{% static 'im/workspace.png' %}" class="w-100" alt="Workspace">
+            <img src="{% static 'im/operadores.png' %}" alt="Operadores" style="width: 55%; margin-left: 120px;">
+        </div>
+    </div>
+    <br>
+    <div class="row mx-auto explain">
+        <div class="col-lg-6 mr-auto  modulo-explain2 column-6">
+            <h3>Operadores aritméticos</h3>
+            <p>
+                Los operadores aritméticos son aquellos son aquellos que se representan con símbolos y con los cuales, 
+                dependiendo de su posición, realizan una operación matemática u asignación a los diferentes datos que 
+                se deben de operar para la obtención de los resultados solicitados o los cuales dan solución a un 
+                problema. 
+            </p>
+        </div>
+        <div class="col-lg-6 mr-auto modulo-explain2 column-6">
+            <h3>Operadores lógicos</h3>
+            <p>
+                Los operadores lógicos son un tipo de símbolo que puede aparecer en las expresiones lógicas e indican 
+                al compilador la realización de determinadas operaciones lógicas, de las cuales se va a obtener valores 
+                booleanos ya sea, true o false, 1 o 0. Con ese resultado se puede dar control a un programa utilizando 
+                las demás estructuras que brindan dicha posibilidad. 
+            </p>
+        </div>
+        <div class="col-lg-12 modulo-explain1">
+            <h4>Operadores relacionales</h4>
+            <p>
+                Los operadores relacionales son los que permiten asignar o dar un valor o valores específicos a una 
+                variable para de esta manera hacer saber al programa el valor de esta y posteriormente operar con ella 
+                o compararla con otras variables.  
+            </p>
         </div>
     </div>
     <div class="row mx-auto explain">
         <div class="col-lg-12 modulo-explain1">
-            <h4>Sintaxis</h4>
+            <h2 class="text-center">Sintaxis</h2>
+            <br>
+            <h4>Operadores aritméticos</h4>
             <p>
-                Los operadores son un tipo de símbolo o carácter que pueden aparecer en las expresiones u 
-                operaciones, esto indican al programa la realización de determinadas operaciones lógicas o 
-                matemáticas. Se pueden aplicar a variables u otros objetos denominados operandos los cuales, luego 
-                de ser operadas, van a arrojas valores ya sea de tipo numérico o booleano, dependiendo cuál sea el 
-                caso. 
+                Matlab puede operar con matrices mediante operadores u también mediante funciones, algunos de los 
+                operadores matriciales de Matlab son los siguientes: <br><br>
+                <ul style="margin-left: 40px;">
+                    <li>+  &nbsp; adición o suma</li>    
+                    <li>–  &nbsp; sustracción o resta</li>    
+                    <li>*  &nbsp; multiplicación</li>
+                    <li>'  &nbsp; traspuesta</li>
+                    <li>^  &nbsp; potenciación</li>    
+                    <li>\  &nbsp; división-izquierda</li>    
+                    <li>/  &nbsp; división-derecha</li>
+                    <li>.*  &nbsp; producto elemento a elemento</li>   
+                    <li>./  &nbsp; división elemento a elemento</li>
+                    <li>.^  &nbsp; elevar a una potencia elemento a elemento</li> 
+                </ul><br>
+                Estos operadores se pueden aplicar a variables o valores escalares pero se debe tener en cuenta que no 
+                se pueden sumar matrices que no sean del mismo tamaño, si estos operadores no se usan de forma correcta 
+                se arroja un mensaje de error.  
+            </p>
+            <br>
+            <h4>Operadores lógicos</h4>
+            <p>
+                Los operadores lógicos en Matlab son los siguientes: <br><br>
+                <ul style="margin-left: 40px;">
+                    <li>& and (función equivalente: and(A,B)). Se evalúan siempre ambos operandos, y el resultado es true sólo si ambos son true. </li>
+                    <li>&& and breve: si el primer operando es false ya no se evalúa el segundo, pues el resultado final ya no puede ser más que false. </li>
+                    <li>| or (función equivalente: or(A,B)). Se evalúan siempre ambos operandos, y el resultado es false sólo si ambos son false. </li>
+                    <li>|| or breve: si el primer operando es true ya no se evalúa el segundo, pues el resultado final no puede ser más que true. </li>
+                    <li>~ negación lógica (función equivalente: not(A)) </li>
+                    <li>xor(A,B) realiza un "or exclusivo", es decir, devuelve 0 en el caso en que ambos sean 1 ó ambos sean 0. </li>
+                </ul><br>
+                Los operandos lógicos se combinan con los relacionales con el fin de comprobar el cumplimiento de las 
+                condiciones múltiples. Los operadores lógicos breves como (&&) y (||) son utilizados para simplificar 
+                las operaciones innecesarias, pero esto también evita diversos errores que se producirán en caso de 
+                evaluar incondicionalmente el segundo argumento. 
+            </p>
+            <br>
+            <h4>Operadores relacionales</h4>
+            <p>
+                En Matlab se cuenta con los siguientes operadores relacionales. A continuación se muestran: <br><br>
+                <ul style="margin-left: 40px;">
+                    <li><  &nbsp; menor que</li>    
+                    <li>>  &nbsp; mayor que</li>    
+                    <li><=  &nbsp; menor o igual que</li>
+                    <li>>=  &nbsp; mayor o igual que</li>
+                    <li>==  &nbsp; igual que</li>    
+                    <li>~=  &nbsp; distinto que</li>
+                </ul><br>
+                La única diferencia entre los operandos relacionales de Matlab con los de C son los dos últimos 
+                operadores, pero este parecido es prácticamente de símbolo únicamente ya quw estos operadores 
+                relacionales en Matlab se usan en vectores y en matrices lo cual hace que estos tengan un significado 
+                especial. <br><br>
+                La diferencia se observa en C cuando una comparación se cumple el resultado es un 1 (true) y si esta 
+                no se cumple es 0 (false). En Matlab los operadores se aplican a matrices o vectores del mismo tamaño, 
+                esta comparación se realiza de elemento a elemento y el resultado que se obtiene es una matriz de unos 
+                y ceros del mismo tamaño la cual contiene el resultado de cada comparación entre elementos.   
             </p>
         </div>
     </div>
-    
     <div class="row mx-auto explain">
         <div class="col-lg-12 modulo-explain">
             <h3>Ejemplos</h3>

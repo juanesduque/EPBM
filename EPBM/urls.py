@@ -18,4 +18,8 @@ urlpatterns = [
     path('', include('apps.operadores.urls')),
     path('', include('apps.repetitivas.urls')),
     path('', include('apps.workspace.urls')),
+    path('', include('apps.proyecto1.urls')),
+    path('', include('apps.proyecto2.urls')),
+    path('', include('apps.proyecto3.urls')),
+    path('', include('apps.proyecto4.urls')),
 ] + static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)

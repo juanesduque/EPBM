@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'baseteoria.html' %}
 
 {% load static %}
 
@@ -9,35 +9,68 @@
 
 
 {% block content %}
+<br><br>
 <section id="section">
-    <div class="row mx-auto explain">
-        <div class="col-lg-12 modulo-explain1">
-            <h4>¿Qué es?</h4>
-            <p>
-                El workspace es un espacio de trabajo en Matlab, en el cual se contienen un conjunto de variables 
-                y funciones de usuario las cuales en un determinado momento están definidas en la memoria del 
-                programa o de la función que se esté ejecutando. Además de esto la ventana workspace constituye 
-                un entorno gráfico para ver las variables definidas en el espacio de trabajo, de esta manera el 
-                usuario puede verificar las variables que se tienen y de esta manera poder usarlas en cualquier 
-                momento. 
-            </p>
+    <div class="row mx-auto">
+        <div class="col-md-12">
+            <h1 style="font-size: 50px;">Tipo de datos</h1>
         </div>
     </div>
     <div class="row mx-auto explain">
         <div class="col-lg-6 mr-auto  modulo-explain2 column-6">
-            <h3>Sintaxis</h3>
+            <h3>¿Qué es?</h3>
             <p>
-                El workspace se encuentra ubicado en la parte derecha del programa como una ventana desplegada 
-                hacia abajo en la cual se observan las diferentes variables que se utilizan en el espacio de 
-                trabajo, dando doble click, así aparece una nueva ventana llamada “array editor” en la cual se 
-                muestran la información o datos que contiene esta variable. Para ver la información del workspace 
-                se debe de tener en cuenta los comandos who y whos, los cuales tienen dos funciones específicas, 
-                al digitar estos dos comandos en el Coommand window el primero ofrece el nombre de la variable y 
-                la segunda ofrece una información más detallada.
+                Ya que anteriormente se ha mencionado que Matlab es un programa diseñado para trabajar con vectores y 
+                matrices. Como un caso particular también trabaja con variables escalares (matrices de dimensión 1). 
+                Cabe resaltar que Matlab trabaja siempre en doble precisión, es decir guardando cada dato en 8 bytes, 
+                con unas 15 cifras decimales exactas. Además de esto, Matlab maneja otros tipos de datos como los 
+                siguientes:
+                <ul style="margin-left: 40px;">
+                    <li>Matrices de más dos dimensiones.</li>
+                    <li>Matrices dispersas.</li>
+                    <li>Vectores y matrices de celdas.</li>
+                    <li>Estructuras y clases y objetos.</li>
+                </ul> 
             </p>
         </div>
         <div class="col-lg-6 ml-auto modulo-explainim column-6">
-            <img src="{% static 'im/workspace.png' %}" class="w-100" alt="Workspace">
+            <img src="{% static 'im/imagen_prueba.png' %}" style="width: 80%; margin-left: 50px;" alt="Datos">
+        </div>
+    </div>
+    <div class="row mx-auto explain">
+        <div class="col-lg-6 mr-auto  modulo-explain2 column-6">
+            <h3>Número reales de doble precisión</h3>
+            <p>
+                Los números double se definen teóricamente como los números flotantes, la diferencia entre ambos es que 
+                los double tienen más bits de almacenamiento. Esto se debe a que después de la coma o el punto se 
+                pueden guardar más datos. <br><br>
+                Matlab mantiene una forma especial para los números muy grandes (más grandes que los que es capaz de 
+                representar), que son considerados como infinito. 
+            </p>
+        </div>
+        <div class="col-lg-6 mr-auto  modulo-explain2 column-6">
+            <h3>Números enteros</h3>
+            <p>
+                Los números enteros son aquellos que contienen a todos los números que hay en la recta real antes y 
+                después de cero, son tener en cuenta los infinitos puntos que hay entre un numero y el otro, además, 
+                son aquellos que no poseen decimales o fracción, es decir, son exactos. <br><br>
+                Matlab permite crear variables enteras con 1, 2, 4 y 8 bytes (8, 16, 32 y 64 bits). A su vez, estas 
+                variables pueden tener signo o no tenerlo. Las variables con signo representan números en intervalos 
+                “casi” simétricos respecto al 0. <br><br>
+                Los tipos de de los enteros con signo son int8, int16, int32 e int 64, y sin signo uint8, uint16, 
+                uint32 y uint64. 
+
+            </p>
+        </div>
+    </div>
+    <div class="row mx-auto explain">
+        <div class="col-lg-12 modulo-explain1">
+            <h4>Número complejos: función complex</h4>
+            <p>
+                En muchos cálculos matriciales los datos y/o los resultados no son reales sino complejos, con parte 
+                real y parte imaginaria. Matlab trabaja sin ninguna dificultad con números complejos. Para ver como 
+                se representan por defecto los números complejos, ejecutándose los siguientes comandos. 
+            </p>
         </div>
     </div>
     <div class="row mx-auto explain">

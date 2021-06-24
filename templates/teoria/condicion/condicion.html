@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'baseteoria.html' %}
 
 {% load static %}
 
@@ -9,23 +9,38 @@
 
 
 {% block content %}
+<br><br>
 <section id="section">
-    <div class="row mx-auto explain">
-        <div class="col-lg-12 modulo-explain1">
-            <h4>¿Qué es?</h4>
-            <p>
-                El workspace es un espacio de trabajo en Matlab, en el cual se contienen un conjunto de variables 
-                y funciones de usuario las cuales en un determinado momento están definidas en la memoria del 
-                programa o de la función que se esté ejecutando. Además de esto la ventana workspace constituye 
-                un entorno gráfico para ver las variables definidas en el espacio de trabajo, de esta manera el 
-                usuario puede verificar las variables que se tienen y de esta manera poder usarlas en cualquier 
-                momento. 
-            </p>
+    <div class="row mx-auto">
+        <div class="col-md-12">
+            <h1 style="font-size: 50px;">Estructuras de condición</h1>
         </div>
     </div>
     <div class="row mx-auto explain">
         <div class="col-lg-6 mr-auto  modulo-explain2 column-6">
-            <h3>Sintaxis</h3>
+            <h3>¿Qué es?</h3>
+            <p>
+                Los condicionales son estructuras que permiten comprobar expresiones lógicas, es decir, permiten 
+                evaluar si el resultado de dicha expresión es falsa o verdadera y a partir de este resultado, tomar 
+                una decisión de si ir por un camino o por otro. <br><br>
+                De esta manera, esta estructura permite tener un control de flujo de ejecución del programa, lo que 
+                hace de esta una herramienta muy potente, pues permite que un programa sea más dinámico u complejo. 
+                Dentro de esta estructura se encuentran tres tipos, la condición if, else if y else; cada una de estas 
+                cumplen una función dentro del control que estos brindan. Por ejemplo, el if evalúa directamente si la 
+                expresión se cumple, a partir de esta decisión toma un camino u otro, posteriormente se tiene el else 
+                if, si en el if el resultado fue negativo, la condición else if permite evaluar una nueva expresión y 
+                comprobar si esta si se cumple, de igual manera, dependiendo del resultado tomará un camino u otro. 
+                Por último, se tiene el else, el cual brinda la posibilidad de que, si no se cumplió ninguno de los 
+                anteriores, se ejecutara por ese camino. 
+            </p>
+        </div>
+        <div class="col-lg-6 ml-auto modulo-explainim column-6">
+            <img src="{% static 'im/condiciones.png' %}" class="w-100" style="margin-top: 80px;" alt="Condición">
+        </div>
+    </div>
+    <div class="row mx-auto explain">
+        <div class="col-lg-6 mr-auto  modulo-explain2 column-6">
+            <h3>Sentencia if, else if y else</h3>
             <p>
                 El workspace se encuentra ubicado en la parte derecha del programa como una ventana desplegada 
                 hacia abajo en la cual se observan las diferentes variables que se utilizan en el espacio de 
@@ -36,8 +51,17 @@
                 la segunda ofrece una información más detallada.
             </p>
         </div>
-        <div class="col-lg-6 ml-auto modulo-explainim column-6">
-            <img src="{% static 'im/workspace.png' %}" class="w-100" alt="Workspace">
+        <div class="col-lg-6 ml-auto modulo-explain2 column-6">
+            <h3>Sentencia switch</h3>
+            <p>
+                El workspace se encuentra ubicado en la parte derecha del programa como una ventana desplegada 
+                hacia abajo en la cual se observan las diferentes variables que se utilizan en el espacio de 
+                trabajo, dando doble click, así aparece una nueva ventana llamada “array editor” en la cual se 
+                muestran la información o datos que contiene esta variable. Para ver la información del workspace 
+                se debe de tener en cuenta los comandos who y whos, los cuales tienen dos funciones específicas, 
+                al digitar estos dos comandos en el Coommand window el primero ofrece el nombre de la variable y 
+                la segunda ofrece una información más detallada.
+            </p>
         </div>
     </div>
     <div class="row mx-auto explain">
