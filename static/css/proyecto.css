@@ -50,7 +50,7 @@ body{
 
 #section .row{
     padding: 10px 0px 10px 0px;
-    width: 50% !important;
+    width: 80% !important;
 }
 
 #section #explain{
@@ -156,4 +156,12 @@ pre, code {
 
 .imagen-content img{
     width: 100%;
+}
+
+#projects{
+    margin-left: 140px;
+}
+
+.projects{
+    margin-left: 135px;
 }

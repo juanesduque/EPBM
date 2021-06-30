@@ -42,25 +42,30 @@
         <div class="col-lg-6 mr-auto  modulo-explain2 column-6">
             <h3>Sentencia if, else if y else</h3>
             <p>
-                El workspace se encuentra ubicado en la parte derecha del programa como una ventana desplegada 
-                hacia abajo en la cual se observan las diferentes variables que se utilizan en el espacio de 
-                trabajo, dando doble click, así aparece una nueva ventana llamada “array editor” en la cual se 
-                muestran la información o datos que contiene esta variable. Para ver la información del workspace 
-                se debe de tener en cuenta los comandos who y whos, los cuales tienen dos funciones específicas, 
-                al digitar estos dos comandos en el Coommand window el primero ofrece el nombre de la variable y 
-                la segunda ofrece una información más detallada.
+                En esta sección se explica un poco la sintaxis de cada estructura, lo quw se va a hacer será mostrar 
+                la estructura y su sintaxis progresivamente, para observar cómo al sumar cada tipo de condición el 
+                flujo mejora. Para empezar, se tiene la sentencia if en su forma más simple, la sentencia if en Matlab 
+                se escribe de forma más simple a diferencia de C/C++/Java – la condición no va entre paréntesis, aunque 
+                se pueden poner si se desea. <br><br>
+                Una vez es usado el comando if se puede agregar el comando else if, el cual es una bifurcación 
+                multiple, en la que se pueden concatenar tantas condiciones como se desee, y que tiene la forma: <br><br>
+                La condición else puede ser omitida: si no está presente no se hace nada en caso de que no se cumpla 
+                ninguna de las condiciones que se han chequeado. <br><br>
+                Una observación a tener en cuenta, es que la condición if puede ser una condición matricial, del tipo 
+                A == B, donde A y B son matrices del mismo tamaño. Como se ha dicho, Matlab dispone de funciones 
+                especiales para ayudar en el chequeo de condiciones matriciales. Por ejemplo, la función isequal(A, B) 
+                devuelve un uno si las dos matrices son idénticas y un cero en caso de que difieran en algo.  
             </p>
         </div>
         <div class="col-lg-6 ml-auto modulo-explain2 column-6">
             <h3>Sentencia switch</h3>
             <p>
-                El workspace se encuentra ubicado en la parte derecha del programa como una ventana desplegada 
-                hacia abajo en la cual se observan las diferentes variables que se utilizan en el espacio de 
-                trabajo, dando doble click, así aparece una nueva ventana llamada “array editor” en la cual se 
-                muestran la información o datos que contiene esta variable. Para ver la información del workspace 
-                se debe de tener en cuenta los comandos who y whos, los cuales tienen dos funciones específicas, 
-                al digitar estos dos comandos en el Coommand window el primero ofrece el nombre de la variable y 
-                la segunda ofrece una información más detallada.
+                La sentencia switch realiza una función análoga a un conjunto de if…elseif concatenados. Su forma 
+                general es de la siguiente manera: <br><br>
+                Al pricipio se evalua switch_expresion, cuyo resultado debe de ser un número escalar o una cadena de 
+                caracteres. Este resultado se compara con las case_expr, y se ejecuta el bloque de sentencias que 
+                corresponda con ese resultado. Si ninguno es igual a switch_expresion se ejecutan las sentencias 
+                correspondientes a otherwise. 
             </p>
         </div>
     </div>
