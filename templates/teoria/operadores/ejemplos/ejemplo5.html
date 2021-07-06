@@ -9,16 +9,16 @@
 
 {% block header %}
 <ul class="left">
-    <li><a href="#">Ejemplo 1</a></li>
-    <li><a href="#">Ejemplo 2</a></li>
-    <li><a href="#">Ejemplo 3</a></li>
-    <li><a href="#">Ejemplo 4</a></li>
-    <li><a href="#">Ejemplo 5</a></li>
-    <li><a href="#">Ejemplo 6</a></li>
+    <li><a href="{% url 'operadores_app:ejemplo1' %}">Ejemplo 1</a></li>
+    <li><a href="{% url 'operadores_app:ejemplo2' %}">Ejemplo 2</a></li>
+    <li><a href="{% url 'operadores_app:ejemplo3' %}">Ejemplo 3</a></li>
+    <li><a href="{% url 'operadores_app:ejemplo4' %}">Ejemplo 4</a></li>
+    <li><a href="{% url 'operadores_app:ejemplo5' %}">Ejemplo 5</a></li>
+    <li><a href="{% url 'operadores_app:ejemplo6' %}">Ejemplo 6</a></li>
 </ul>
 <ul class="right">
     <li>
-        <a href="{% url 'workspace_app:workspace' %}"><img src="{% static 'im/regreso.png' %}" class="mr-2">Regresar</a>
+        <a href="{% url 'operadores_app:operadores' %}"><img src="{% static 'im/regreso.png' %}" class="mr-2">Regresar</a>
     </li>
 </ul>
 {% endblock header %}    
@@ -26,14 +26,15 @@
 {% block content %}
 <div class="row mx-auto content" id="content">
     <div class="col-md-12">
-        <h1>Proyecto #1</h1>
+        <br>
+        <br>
         <br>
     </div>
 </div>
 <section id="section">
     <div class="row mx-auto">
         <div class="col-md-12 text-center">
-            <h1>Ejemplo #1</h1>
+            <h1>Ejemplo #5</h1>
         </div>
     </div>
     <hr><br>
@@ -42,9 +43,8 @@
             <h2>Enunciado</h2>
             <br>
             <p>
-                En una finca se montó un sistema de riego automático el cual permite al agricultor tener un mejor y más eficiente
-                control del cultivo teniendo grandes ventajas como el ahorro de recursos tanto hídricos como económicos, además 
-                de que se tiene un cultivo más productivo y de mejor calidad. 
+                Pedir al usuario que ingrese dos números y comparar si la multiplicación de dichos números son mayor o 
+                igual a 70, de ser así imprimir true, de lo contrario imprimir false.
             </p><br>
             <button href="#" id="empezar" class="btn btn-open2">Empezar proyecto</button>
         </div>
@@ -64,22 +64,6 @@
     <span style="color: blue;"> 8 </span><span> Serial.begin(9600);</span>
     <span style="color: blue;"> 9 </span><span>}</span>
     <span style="color: blue;">10 </span><span>void loop(){</span>
-    <span style="color: blue;">11 </span><span id="cont-higlight1" class="line-higlight"><span id="linea-higlight1"> </span><span id="linea-1" class="desactivate"> temperatura = analogRead(SensorTemperatura);</span></span>
-    <span style="color: blue;">12 </span><span> humedad = analogRead(SensorHumedad);</span>
-    <span style="color: blue;">13 </span><span> ph = analogRaed(SensorPh);</span>
-    <span style="color: blue;">14 </span><span> temperatura = map(temperatura, 0, 1023, 0, 100);</span>
-    <span style="color: blue;">15 </span><span> humedad = map(humedad, 0, 1023, 0, 100);</span>
-    <span style="color: blue;">16 </span><span id="cont-higlight2" class="line-higlight"><span id="linea-higlight2"> </span><span id="linea-2" class="desactivate"> ph = map(ph, 0, 1023, 0, 14);</span></span>
-    <span style="color: blue;">17 </span><span> Serial.print("La temperatura es: ");</span>
-    <span style="color: blue;">18 </span><span> Serial.print(temperatura);</span>
-    <span style="color: blue;">19 </span><span> Serial.println("° C.");</span>
-    <span style="color: blue;">20 </span><span id="cont-higlight3" class="line-higlight"><span id="linea-higlight3"> </span><span id="linea-3" class="desactivate"> Serial.print("La humedad es: ");</span></span>
-    <span style="color: blue;">21 </span><span> Serial.print(humedad);</span>
-    <span style="color: blue;">22 </span><span> Serial.println("%.");</span>
-    <span style="color: blue;">23 </span><span> Serial.print("El ph del suelo es: ");</span>
-    <span style="color: blue;">24 </span><span id="cont-higlight4" class="line-higlight"><span id="linea-higlight4"> </span><span id="linea-4" class="desactivate"> Serial.print(ph);</span></span>
-    <span style="color: blue;">25 </span><span> Serial.println(" de acidez.");</span>
-    <span style="color: blue;">26 </span><span>}</span>
                 </code>
             </pre>
             <br>
@@ -101,22 +85,6 @@
     <span style="color: blue;"> 8 </span><span>Luego, se inicia la comunicación serial a una velocidad de 9600 baudios.</span>
     <span style="color: blue;"> 9 </span><span>Se cierra la función de configuración.</span>
     <span style="color: blue;">10 </span><span>Se abre la función principal de ciclo infinito en la cual se pone el código que se desea ejecutar.</span>
-    <span style="color: blue;">11 </span><span>Se lee el pin análogo A0 y se almacena su lectura en la variable temperatura.</span>
-    <span style="color: blue;">12 </span><span>Se lee el pin análogo A1 y se almacena su lectura en la variable humedad.</span>
-    <span style="color: blue;">13 </span><span>Se lee el pin análogo A2 y se almacena su lectura en la variable ph.</span>
-    <span style="color: blue;">14 </span><span>Luego se mapean o convierten los valores de entrada en valores que sean entendible para el usuario y mostrarlos en la salida.</span>
-    <span style="color: blue;">15 </span><span>También se mapean o convierten los valores de entrada en valores que sean entendible para el usuario y mostrarlos en la salida.</span>
-    <span style="color: blue;">16 </span><span>También se mapean o convierten los valores de entrada en valores que sean entendible para el usuario y mostrarlos en la salida.</span>
-    <span style="color: blue;">17 </span><span>Se imprime un mensaje informativo expresando o explicando cuál es el parámetro o variable que se va a mostrar en el monitor serial para que de esta manera sea más entendible el programa.</span>
-    <span style="color: blue;">18 </span><span>Además, se imprime la variable que se quiere mostrar, en este caso la temperatura leída por el sensor.</span>
-    <span style="color: blue;">19 </span><span>También se imprime otro mensaje mostrando las unidades en las que se expresa dicho parámetro.</span>
-    <span style="color: blue;">20 </span><span>Se imprime un mensaje informativo expresando o explicando cuál es el parámetro o variable que se va a mostrar en el monitor serial para que de esta manera sea más entendible el programa.</span>
-    <span style="color: blue;">21 </span><span>Además, se imprime la variable que se quiere mostrar, en este caso la humedad leída por el sensor.</span>
-    <span style="color: blue;">22 </span><span>También se imprime otro mensaje mostrando las unidades en las que se expresa dicho parámetro.</span>
-    <span style="color: blue;">23 </span><span>Se imprime un mensaje informativo expresando o explicando cuál es el parámetro o variable que se va a mostrar en el monitor serial para que de esta manera sea más entendible el programa.</span>
-    <span style="color: blue;">24 </span><span>Además, se imprime la variable que se quiere mostrar, en este caso el ph leído por el sensor.</span>
-    <span style="color: blue;">25 </span><span>También se imprime otro mensaje mostrando las unidades en las que se expresa dicho parámetro.</span>
-    <span style="color: blue;">26 </span><span>Por último, se cierra la función de ciclo infinito.</span>
                 </code>
             </pre>
             <br>
@@ -124,8 +92,6 @@
                 <button href="#" class="btn btn-open2" id="reiniciar">Reiniciar</button>
             </div>
         </div>
-    
-    
         <div class="mx-auto col-md-5 mod1 text-center" id="form">
             <h3 id="linea">Linea #</h3>
             <br>
@@ -246,7 +212,6 @@
                 $('#congratulation').text(lineas[cont-1].congratulation)
             }else{
                 $(cont_higlight).removeClass('line-higlight')
-                // $('#form').toggle('')
                 $('#explain-code').toggle('')
                 $('#siguiente_botones').toggle('')
                 $('#congratulation').text(lineas[cont-1].congratulation)
