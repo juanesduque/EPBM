@@ -1,0 +1,335 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block styles %}
+<link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css" media="all" />
+{% endblock styles %}
+
+
+{% block content %}
+<main id="main">
+    <div class="row mx-auto" id="presentation">
+        <div class="col-lg-12 col-md-12 col-12" id="title">
+            <h3 class="d-inline-block">Matlab</h3>
+            <div class="imagen-content d-inline-block ml-3">
+                <img src="{% static 'im/imagen_prueba.png' %}" alt="Logo matlab">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Inicio</a></li>
+                    <li><a href="#teoria">Teoría</a></li>
+                    <li><a href="#ejercicios">Ejercicios</a></li>
+                </ul>
+            </nav><br>
+            <div class="row mx-auto">
+                <div class="col-md-12">
+                    <h1>Enseñanza de la programación basada en Matlab</h1>
+                    <p>
+                        Enseñanza de la programación basada en Matlab, es un software diseñado por la Univerdidad 
+                        Tecnológica de Pereira que tiene como fin enseñar al alumno a programar utilizando como 
+                        herramienta el lenguaje de programación denominado Matlab. Este se divide en dos 
+                        secciones principales las cuales componen el aplicativo, la sección teórica y la sección 
+                        práctica; en la teórica se explican los conceptos básicos de este lenguaje a través de 
+                        los cuales este permite crear un programa, su estructura, su sintaxis y el manejo 
+                        que se le debe dar para la solución de cualquier problema. Por otra parte, en la práctica 
+                        se busca generar en el alumno la capacidad de poder observar y dar solución a diferentes 
+                        problemas que se pueden presentar a la hora de desarrollar un proyecto utilizando el 
+                        lenguaje.
+                    </p>
+                </div>
+            </div>
+            <div class="row mx-auto">
+                <div class="col-md-6 col-12">
+                    <h4>¿Qué se va a aprender?</h4>
+                    <p>
+                        Como ya se mencionó, el software se compone de dos partes principales en las que se 
+                        encuentran una parte teórica y otra práctica. En la teoría se aprenderá sobre todos los 
+                        conceptos y aspectos más importantes de la programación y más precisamente, en el lenguaje 
+                        que se va a estudiar, además, se aprenderá todo lo relacionado con las estructuras que 
+                        componen este lenguaje y su sintaxis. En la práctica se realizarán 4 ejercicios con los 
+                        cuales se mostrará el uso de todas las estructuras aprendidas en la teoría y cómo, al unir
+                        todas estas, se puede dar solución a cualquier tipo de problema utilizando este lenguaje. 
+                        También, a medida de que se desarrolla cada ejercicio, se va explicando la forma en la que 
+                        este se diseñó para que el alumno tenga más claridad y esté en la capacidad de implementar 
+                        cualquier programa que le brinde una solución.
+                </div>
+                <div class="col-md-6 col-12">
+                    <h4>Lenguaje Matlab</h4>
+                    <p>
+                        Es importante saber acerca del lenguaje de programación en el que se va a trabajar, el 
+                        cual se denomina Matlab. En esta sección se va a aprender sobre cuales son sus usos y 
+                        características, además, acerca de qué lo hace importante a la hora de aprender a 
+                        programar y de solucionar problemas matemáticos de alta complejidad. Matlab es un 
+                        lenguaje de programación el cuál tiene como propósito la codificación de algoritmos 
+                        complejos que permiten la solución a grandes problemas, en especial a problemas 
+                        estadísticos y matemáticos de alta complejidad los cuales en su mayoría modelan algún 
+                        fenómeno o sistema físico. Este lenguaje permite todo tipo de estructuras, tiene gran 
+                        variedad de librerías que contienen funciones las cuales permiten simplificar en gran 
+                        medida la implementación de ciertos programas.
+                    </p>
+                </div>
+            </div>
+            <div class="row mx-auto">
+                <div class="col-md-10">
+                    <img src="{% static 'im/Matlab.png' %}" class="w-100" alt="Entorno de matlab"/>
+                </div>
+            </div>
+            <br>
+            <div class="row mx-auto" id="teoria">
+                <div class="col-md-12">
+                    <h1>Teoría</h1>
+                    <p>
+                        Como ya se había dicho anteriormente, en la sección teórica se van a explicar y a 
+                        mostrar los diferentes conceptos básicos y estructuras que componen el lenguaje de 
+                        Matlab, todo esto con el fin de enseñar al estudiante todo lo necesario para 
+                        que este pueda desenvolverse con la programación y pueda dar solución a cualquier 
+                        problema que se le presente utilizando esta herramienta. Además, el estudiante 
+                        estará en la capacidad de utilizar la lógica para una vez conocidos los conceptos, 
+                        implementar algoritmos de cualquier complejidad.
+                    </p>
+                    <a href="#" id="openmodul" class="btn btn-open mx-auto my-md-5">Abrir Modulos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mx-auto">
+        <aside class="col-lg-12 col-md-12 col-12 text-md-center my-md-5 desactivate" id="slider">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card" style="width: 25%;">
+                            <div class="content" style="width: 90%; margin-left: 15px;">
+                                <img src="{% static 'im/workspace.png' %}" class="w-100" alt="Workspace">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">1. Workspace</h5>
+                                <p class="card-text text-justify">
+                                    Se explicará qué es el workspace, sus funciones y la importancia que este 
+                                    tiene en la programación.
+                                </p>
+                                <a href="{% url 'workspace_app:workspace' %}" class="btn btn-open2">Empezar módulo</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 25%;">
+                            <div class="content" style="width: 86%; margin-left: 15px;">
+                                <img src="{% static 'im/command.png' %}" class="w-100"alt="">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">2. Command window</h5>
+                                <p class="card-text text-justify">
+                                    Se explicará qué es el command window, cuáles son sus funciones y la relevancia
+                                    de este en la programación.
+                                </p>
+                                <a href="{% url 'command_window_app:command_window' %}" class="btn btn-open2">Empezar módulo</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 25%;">
+                            <div class="content" style="width: 87%;">
+                                <img src="{% static 'im/matrices.png' %}" class="w-100" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">3. Matrices</h5>
+                                <p class="card-text text-justify">
+                                    Se explicará qué es una matriz, cómo se utilizan y la importancia de estas 
+                                    en este lenguaje de programación.
+                                </p>
+                                <a href="{% url 'matrices_app:matrices' %}" class="btn btn-open2">Empezar módulo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card" style="width: 25%;">
+                            <div class="content" style="width: 63%; margin-left: 55px;">
+                                <img src="{% static 'im/operadores.png' %}" class="w-100" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">4. Operadores</h5>
+                                <p class="card-text text-justify">
+                                    Se explicará qué es un operador, cuáles son sus funciones, sus tipos y la 
+                                    importancia de estos en la programación.
+                                </p>
+                                <a href="{% url 'operadores_app:operadores' %}" class="btn btn-open2">Empezar módulo</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 25%;">
+                            <div class="content" style="width: 200px; margin-left: 48px;">
+                                <img src="{% static 'im/imagen_prueba.png' %}" class="w-100" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">5. Tipos de datos</h5>
+                                <p class="card-text text-justify">
+                                    Se explicará qué es un dato, cuáles son sus funciones, sus tipos y la 
+                                    importancia de estos en la programación.
+                                </p>
+                                <a href="{% url 'datos_app:datos' %}" class="btn btn-open2">Empezar módulo</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 25%;">
+                            <div class="content" style="width: 90%; margin-left: 5px;">
+                                <img src="{% static 'im/condiciones.png' %}" class="w-100" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">6. Condiciones</h5>
+                                <p class="card-text text-justify">
+                                    Se explicará qué son las condiciones, cuáles son sus funciones y la
+                                    importancia de estas en la programación.
+                                </p>
+                                <a href="{% url 'condicion_app:condicion' %}" class="btn btn-open2">Empezar módulo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card" style="width: 25%;">
+                            <div class="content" style="width: 90%; margin-left: 10px; margin-bottom: -20px;">
+                                <img src="{% static 'im/ciclos.png' %}" class="w-100" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">7. Ciclos</h5>
+                                <p class="card-text text-justify">
+                                    Se explicará qué son los ciclos o estructuras repetitivas, cuáles son sus 
+                                    funciones y la importancia de estos en la programación.
+                                </p>
+                                <a href="{% url 'repetitivas_app:repetitivas' %}" class="btn btn-open2">Empezar módulo</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 25%;">
+                            <div class="content" style="width: 80%; margin-left: 22px; margin-bottom: 20px;">
+                                <img src="{% static 'im/datos.png' %}" class="w-100" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">8. Lectura y escritura de datos</h5>
+                                <p class="card-text text-justify">
+                                    Se explicará qué es la entrada y salida de datos, su uso y función; además, 
+                                    se explicará la importancia de esto en la programación.
+                                </p>
+                                <a href="{% url 'ledatos_app:ledatos' %}" class="btn btn-open2">Empezar módulo</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 25%;">
+                            <div class="content" style="width: 80%; margin-left: 25px; margin-bottom: 80px;">
+                                <img src="{% static 'im/esdatos.png' %}" class="w-100" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">9. Entrada y salida de datos</h5>
+                                <p class="card-text text-justify">
+                                    Se explicará cómo y para qué se puede controlar la entrada y salida de datos,
+                                    además de lo importante que es esto en la programación.
+                                </p>
+                                <a href="{% url 'esdatos_app:esdatos' %}" class="btn btn-open2">Empezar módulo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card" style="width: 25%;">
+                            <div class="content" style="width: 70%; margin-left: 40px;">
+                                <img src="{% static 'im/ficheros.png' %}" class="w-100" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">10. Archivos</h5>
+                                <p class="card-text text-justify">
+                                    Se explicará qué es la entrada y salida de ficheros, su uso y función; además, 
+                                    se explicará la importancia de esto en la programación.
+                                </p>
+                                <a href="{% url 'leficheros_app:leficheros' %}" class="btn btn-open2">Empezar módulo</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 25%;">
+                            <div class="content" style="width: 70%; margin-left: 40px; margin-bottom: -18px;">
+                                <img src="{% static 'im/funciones.png' %}" class="w-100" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">11. Funciones</h5>
+                                <p class="card-text text-justify">
+                                    Se va a explicar qué son las funciones, para qué se usan, cómo se usan, cómo 
+                                    no y su sintaxis. Además, se explicará la importancia de estas.
+                                </p>
+                                <a href="{% url 'funciones_app:funciones' %}" class="btn btn-open2">Empezar módulo</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 25%;">
+                            <div class="content" style="width: 83%; margin-left: 20px;">
+                                <img src="{% static 'im/clases.png' %}" class="w-100" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">12. Clases</h5>
+                                <p class="card-text text-justify">
+                                    Se va a explicar qué son las clases, para qué se usan, cómo, sus ventajas y 
+                                    su sintaxis. Además, se explicará la importancia que estas tienen.
+                                </p>
+                                <a href="{% url 'clases_app:clases' %}" class="btn btn-open2">Empezar módulo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<section id="exercises" class="text-md-center mt-md-5">
+    <div class="row mx-auto" id="ejercicios">
+        <div class="col-md-12 col-12 explicacion">
+            <h3>Ejercicios</h3>
+            <p>
+                En la sección de práctica se tendrán 4 ejercicios los cuales poseen diferente nivel de 
+                complejidad, ya que de esta manera se puede mostrar todo lo que se logra realizar con Matlab y, 
+                cómo se puede solucionar cualquier problema a través de software. Los ejercicios se componen de 
+                una parte de código, un poco de interacción para ejecutar y una explicación, puesto que con esta 
+                se pretende hacer que el estudiante sepa y comprenda cómo funciona el código y para qué se 
+                implementó dicho algoritmo.
+            </p>
+        </div>
+        <div class="col-md-12 col-12 text-md-center">
+            <div class="card" style="width: 20%;">
+                <div class="content" style="width: 200px;">
+                    <img src="{% static 'im/imagen_prueba.png' %}" class="w-100" alt="">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Ejercicio 1</h5>
+                    <p class="card-text">.</p>
+                    <a href="{% url 'proyecto1_app:proyecto1' %}" class="btn btn-open">Vamos al ejercicio</a>
+                </div>
+            </div>
+            <div class="card" style="width: 20%;">
+                <div class="content" style="width: 200px;">
+                    <img src="{% static 'im/imagen_prueba.png' %}" class="w-100" alt="">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Ejercicio 2</h5>
+                    <p class="card-text">.</p>
+                    <a href="{% url 'proyecto2_app:proyecto2' %}" class="btn btn-open">Vamos al ejercicio</a>
+                </div>
+            </div>
+            <div class="card" style="width: 20%;">
+                <div class="content" style="width: 200px;">
+                    <img src="{% static 'im/imagen_prueba.png' %}" class="w-100" alt="">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Ejercicio 3</h5>
+                    <p class="card-text">.</p>
+                    <a href="{% url 'proyecto3_app:proyecto3' %}" class="btn btn-open">Vamos al ejercicio</a>
+                </div>
+            </div>
+            <div class="card" style="width: 20%;">
+                <div class="content" style="width: 200px;">
+                    <img src="{% static 'im/imagen_prueba.png' %}" class="w-100" alt="">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Ejercicio 4</h5>
+                    <p class="card-text">.</p>
+                    <a href="{% url 'proyecto4_app:proyecto4' %}" class="btn btn-open">Vamos al ejercicio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

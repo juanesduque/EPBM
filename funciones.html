@@ -1,0 +1,148 @@
+{% extends 'baseteoria.html' %}
+
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/modulos.css' %}" type="text/css" media="all">
+<link rel="stylesheet" href="{% static 'css/highlight/dark.css' %}" type="text/css" media="all">
+{% endblock styles %}
+
+
+{% block content %}
+<br><br>
+<section id="section">
+    <div class="row mx-auto explain">
+        <h1 style="font-size: 50px;">Funciones</h1>
+        <div class="col-lg-12 modulo-explain1">
+            <h4>¿Qué es?</h4>
+            <p>
+                Las funciones son bloques o segmentos de código que reciben un nombre y los cuales realizan o 
+                ejecutan una tarea especifica dentro de un programa, esta herramienta es útil y utilizada dentro 
+                del paradigma de la programación estructurada, ya que permite dividir un programa de gran 
+                complejidad en segmentos de código más pequeños donde cada uno cumple una tarea diferente y este 
+                se puede repetir una cantidad N de veces dentro de un programa dependiendo de cuál sea la 
+                necesidad. Dichas funciones tienen algunas reglas a tener en cuenta como parámetros de entrada, 
+                su salida, nombre y demás cosas. <br><br>
+                Además, se sabe que existen varios tipos de funciones las cuales tienen una utilidad diferente y 
+                es importante conocer cada una de ellas con el fin de saber en qué momento y para que usarlas. 
+
+            </p>
+        </div>
+    </div>
+    <div class="row mx-auto explain">
+        <div class="col-lg-6 mr-auto  modulo-explain2 column-6">
+            <h3>Sintaxis</h3>
+            <p>
+                Para la programación de funciones de Matlab basta con crear un archivo o hoja en blanco 
+                inicialmente, se procede a crear la función a partir de escribir el comando function una vez se 
+                tiene esto se asignan las salidas de la función se iguala y se digita el nombre del documento en 
+                donde se desea emplear la función y sus respectivas entradas, como es habitual un end para 
+                terminar la operación. 
+            </p>
+        </div>
+        <div class="col-lg-6 ml-auto modulo-explainim column-6">
+            <img src="{% static 'im/funciones.png' %}" class="w-100" alt="Funciones">
+        </div>
+    </div>
+    <div class="row mx-auto explain">
+        <div class="col-lg-12 modulo-explain">
+            <h3>Ejemplos</h3>
+            <p>
+                En la sección de ejemplos se pretende poner en práctica el concepto que fue explicado anteriormente 
+                con el fin de interiorizar el tema, verlo en ejecución, ver cómo se utiliza y para qué, ya que de 
+                esta manera es que se logra un aprendizaje significativo. En los ejemplos se encontraran ejercicios 
+                que pretenden dar solución a ciertos problemas planteados, esto con el fin de llevar la explicación 
+                más a la vida real y de qué mejor manera que poniendo porblemas que se presentan en la vida cotidiana
+                y resolviéndolos con este lenguaje de programación.
+            </p>
+            <div class="text-md-center">
+                <a href="#" id="openmodul" class="btn btn-open mx-auto my-md-5">Abrir ejemplos</a>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="row mx-auto">
+    <aside class="col-lg-12 col-md-12 col-12 text-md-center my-md-5 desactivate" id="slider">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="card" style="width: 25%;">
+                        <div class="content" style="width: 200px; margin-left: 48px;">
+                            <img src="{% static 'im/imagen_prueba.png' %}" class="w-100" alt="Workspace">
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Ejemplo #1</h3>
+                            <br><br>
+                            <a href="{% url 'workspace_app:ejemplo1' %}" class="btn btn-open2">Empezar ejemplo</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 25%;">
+                        <div class="content" style="width: 200px; margin-left: 48px;">
+                            <img src="{% static 'im/imagen_prueba.png' %}" class="w-100"alt="">
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Ejemplo #2</h3>
+                            <br><br>
+                            <a href="{% url 'workspace_app:ejemplo2' %}" class="btn btn-open2">Empezar ejemplo</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 25%;">
+                        <div class="content" style="width: 200px; margin-left: 48px;">
+                            <img src="{% static 'im/imagen_prueba.png' %}" class="w-100" alt="">
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Ejemplo #3</h3>
+                            <br><br>
+                            <a href="{% url 'workspace_app:ejemplo3' %}" class="btn btn-open2">Empezar ejemplo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card" style="width: 25%;">
+                        <div class="content" style="width: 200px; margin-left: 48px;">
+                            <img src="{% static 'im/imagen_prueba.png' %}" class="w-100" alt="">
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Ejemplo #4</h3>
+                            <br><br>
+                            <a href="{% url 'workspace_app:ejemplo4' %}" class="btn btn-open2">Empezar ejemplo</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 25%;">
+                        <div class="content" style="width: 200px; margin-left: 48px;">
+                            <img src="{% static 'im/imagen_prueba.png' %}" class="w-100" alt="">
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Ejemplo #5</h3>
+                            <br><br>
+                            <a href="{% url 'workspace_app:ejemplo5' %}" class="btn btn-open2">Empezar ejemplo</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 25%;">
+                        <div class="content" style="width: 200px; margin-left: 48px;">
+                            <img src="{% static 'im/imagen_prueba.png' %}" class="w-100" alt="">
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Ejemplo #6</h3>
+                            <br><br>
+                            <p class="card-text">
+                            <a href="{% url 'workspace_app:ejemplo6' %}" class="btn btn-open2">Empezar ejemplo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </aside>
+</div>
+{% endblock content %}
+
+{% block scripts %}
+{% endblock scripts %}
